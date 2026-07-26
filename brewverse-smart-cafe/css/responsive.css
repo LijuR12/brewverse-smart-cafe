@@ -1,0 +1,80 @@
+/* =========================================================
+   BREWVERSE — Responsive
+   ========================================================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1080px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero-stats { gap: var(--sp-5); }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-cup-wrap { width: 280px; height: 280px; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-media-badge { position: static; margin-top: var(--sp-4); display: inline-block; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .builder { grid-template-columns: 1fr; }
+  .builder-preview { position: static; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.wide { grid-column: span 1; }
+
+  .reservation-wrap { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  :root { --sp-9: 3.5rem; }
+
+  .container { padding: 0 var(--sp-4); }
+
+  .section-title { font-size: var(--fs-2xl); }
+
+  .hero-title { font-size: 2.1rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn { width: 100%; }
+  .hero-stats { gap: var(--sp-5); flex-wrap: wrap; }
+
+  .about-values { grid-template-columns: 1fr; }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
+  .stat-item .stat-number { font-size: var(--fs-xl); }
+
+  .card-grid { grid-template-columns: 1fr; }
+
+  .menu-toolbar { flex-direction: column; align-items: stretch; }
+  .search-box { width: 100%; }
+
+  .form-grid { grid-template-columns: 1fr; }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .cart-drawer { width: 100vw; }
+
+  .quiz-options { flex-direction: column; }
+  .quiz-option { width: 100%; }
+
+  .toast-container { left: var(--sp-4); right: var(--sp-4); }
+  .toast { min-width: 0; width: 100%; }
+
+  .back-to-top { width: 40px; height: 40px; bottom: var(--sp-4); left: var(--sp-4); }
+}

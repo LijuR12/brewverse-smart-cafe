@@ -1,0 +1,112 @@
+/* =========================================================
+   BREWVERSE — Components
+   ========================================================= */
+
+/* Mobile nav drawer */
+.mobile-nav {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: min(300px, 80vw);
+  background: var(--bg);
+  z-index: calc(var(--z-nav) + 1);
+  padding: var(--sp-8) var(--sp-6);
+  transform: translateX(100%);
+  transition: transform var(--med) var(--ease);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+.mobile-nav.active { transform: translateX(0); }
+.mobile-nav a { font-size: var(--fs-md); font-weight: 600; }
+.mobile-nav-close { align-self: flex-end; width: 36px; height: 36px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+.mobile-theme-toggle { display: flex; align-items: center; gap: var(--sp-3); margin-top: auto; padding-top: var(--sp-5); border-top: 1px solid var(--border); font-size: var(--fs-sm); }
+
+/* Checkout modal */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(20, 12, 8, 0.55);
+  z-index: var(--z-modal);
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--sp-5);
+  opacity: 0; visibility: hidden;
+  transition: opacity var(--med) var(--ease), visibility var(--med) var(--ease);
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+.modal-box {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-7);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform var(--med) var(--ease);
+}
+.modal-overlay.active .modal-box { transform: scale(1); }
+.modal-box .icon-circle-lg {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--color-accent-soft); color: var(--color-accent-deep);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--sp-5);
+}
+.modal-box h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-3); }
+.modal-box p { color: var(--text-muted); font-size: var(--fs-sm); margin-bottom: var(--sp-6); }
+.order-id-chip {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  padding: var(--sp-2) var(--sp-5);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-6);
+}
+
+/* Theme toggle switch */
+.theme-toggle-track {
+  width: 44px; height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  flex-shrink: 0;
+}
+.theme-toggle-track .knob {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent-deep);
+  transition: transform var(--fast) var(--ease);
+  display: flex; align-items: center; justify-content: center;
+}
+[data-theme="dark"] .theme-toggle-track .knob { transform: translateX(20px); }
+
+/* Skip link (a11y) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-primary);
+  color: var(--color-cream);
+  padding: var(--sp-3) var(--sp-5);
+  z-index: 1000;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+.skip-link:focus { left: 0; }
+
+/* Star rating shared */
+.stars-inline { color: var(--color-accent-deep); }
+
+/* Lazy image fade-in */
+img.lazy { opacity: 0; transition: opacity var(--med) var(--ease); }
+img.lazy.loaded { opacity: 1; }
+
+/* Divider wave between sections (subtle) */
+.divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); }
+
+/* Utility */
+.text-center { text-align: center; }
+.mt-6 { margin-top: var(--sp-6); }
+.hidden-el { display: none !important; }

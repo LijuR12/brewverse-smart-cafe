@@ -1,0 +1,42 @@
+[
+  {
+    "id": "t01",
+    "name": "Ananya Rao",
+    "role": "Regular Customer",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "rating": 5,
+    "text": "BrewVerse has the best caramel latte in town. The ambience makes it my go-to spot for work meetings."
+  },
+  {
+    "id": "t02",
+    "name": "Karthik Iyer",
+    "role": "Food Blogger",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "rating": 5,
+    "text": "Every visit feels premium. The build-your-own-coffee feature is such a fun touch, and the cake is unreal."
+  },
+  {
+    "id": "t03",
+    "name": "Meera Nair",
+    "role": "Design Student",
+    "image": "https://randomuser.me/api/portraits/women/44.jpg",
+    "rating": 4,
+    "text": "Cozy corner, great wifi, and the cold brew is consistently smooth. My favorite study spot."
+  },
+  {
+    "id": "t04",
+    "name": "Rohan Verma",
+    "role": "Software Engineer",
+    "image": "https://randomuser.me/api/portraits/men/76.jpg",
+    "rating": 5,
+    "text": "I booked a table online in seconds and the staff had it ready exactly on time. Great experience end to end."
+  },
+  {
+    "id": "t05",
+    "name": "Priya Menon",
+    "role": "Photographer",
+    "image": "https://randomuser.me/api/portraits/women/21.jpg",
+    "rating": 5,
+    "text": "The gallery on their website doesn't do it justice - the space is even more beautiful in person."
+  }
+]
